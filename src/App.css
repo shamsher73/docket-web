@@ -1,39 +1,28 @@
-.App {
+.login-gradient {
+  background: linear-gradient(180deg, #d4e0f5 0%, #c8cee6 100%);
+  mix-blend-mode: normal;
+}
+
+.google-button {
+  background: #FC5A5A;
+  border-radius: 12px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.84px;
+  line-height: 22px;
   text-align: center;
+  color: #FFFFFF; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25.2px;
+  line-height: 38px;
+  /* identical to box height */
+  letter-spacing: 0.105px;
+  color: #232324;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
