@@ -1,3 +1,6 @@
+.app {
+  background: #FAFAFB;
+}
 .login-gradient {
   background: linear-gradient(180deg, #d4e0f5 0%, #c8cee6 100%);
   mix-blend-mode: normal;
@@ -26,3 +29,116 @@
   color: #232324;
 }
 
+.search-box {
+  background: #F1F1F1;
+  border-radius: 6px;
+}
+
+.user-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.6px;
+  line-height: 13px;
+  /* identical to box height, or 100% */
+  letter-spacing: 0.09px;
+  color: #171725;
+}
+
+.sidemenu-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1px;  
+}
+
+.sidemenu-active {
+  background: linear-gradient(180deg, #6B85E6 0%, #6895E6 100%);
+  border-radius: 16.5926px;
+  color: #FFFFFF;
+}
+
+.overview-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 36px;
+  /* identical to box height, or 164% */
+
+  text-align: left;
+  letter-spacing: 0.1px;
+
+  color: #171725;
+}
+
+.dashboard-selector {
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.dashboard-selector-text {
+  top: calc(50% - 24px/2 - 305px);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.1px;
+
+  color: #44444F;
+}
+
+.dashboard-selector-active {
+  background: linear-gradient(180deg, #6B85E6 0%, #6895E6 100%);
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.card-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #171725;
+}
+
+.progress-bar {
+  border-radius: 7px; 
+  width: 80%;
+  height: 20px;
+  /* box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 ); */
+}
+.progress-bar::-webkit-progress-bar {
+  background-color: #D4EAFA;
+  border-radius: 7px;
+}
+.progress-bar::-webkit-progress-value {
+  background-color: #64B3EB;
+  border-radius: 7px;
+  /* box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 ); */
+}
+
+.success-rate {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #171725;
+}

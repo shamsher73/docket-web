@@ -1,13 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import UserLogin from './features/login/UserLogin';
 import './App.css';
+import { Outlet} from 'react-router-dom';
+import Header from './components/Header';
+import NavBarTop from './components/NavBarTop';
 
 function App() {
   return (
-    <div >
-      <UserLogin />
+    <div className='app h-screen'>
+      <Header name="Shivam Chaudhary"/>
+      <div className='flex h-full'>
+        <NavBarTop />
+        <Outlet />
+      </div>
+      
     </div>
   );
 }
