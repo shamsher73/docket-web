@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UserLogin from './features/login/UserLogin';
 import Dashboard from './features/dashboard/Dashboard';
+import MyDayTasks from './features/my-day-tasks/MyDayTasks';
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Route path="/login" element={<UserLogin />} />
             <Route path="/" element={<App />} >
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/my-day-tasks" element={<MyDayTasks />} />
             </Route>
             <Route
               path="*"

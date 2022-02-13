@@ -8,7 +8,7 @@ const Header = ({name}: {name:string}) => {
                 LOGO
             </div>
             <div className='flex-auto w-64'>
-                <div className="flex-1 w-32 container justify-left">
+                <div className="flex-1 w-32 justify-left">
                     <div className="flex border-1 rounded search-box">
                         <button className="flex items-center justify-center px-4 ">
                             <svg className="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
