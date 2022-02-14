@@ -1,6 +1,24 @@
 import { ReactComponent as Person } from './../../../styles/form-person.svg';
+import Creatable from 'react-select/creatable';
 
 const TaskCreationForm = () => {
+
+    const customStyles = {
+        control: (base:any, state:any) => ({
+            ...base,
+            background: "#384986",
+            borderRadius: "6px",
+            border: "1px solid #384986",
+        }),
+      
+      };
+
+    const options = [
+        { value: 'id1', label: 'Category 1' },
+        { value: 'id2', label: 'Category 2' },
+        { value: 'id3', label: 'Category 3' }
+      ]
+
     return (
         <div className="task-create-form w-full p-4">
              <Person className='absolute person-align'/>
@@ -15,7 +33,7 @@ const TaskCreationForm = () => {
                 </div>
                 <div className="flex-auto w-24 p-4">
                     <label className="form-label">Category</label>
-                    <input type="text" className="w-full input-area" />
+                    <Creatable options={options} styles={customStyles}  />
                 </div>
                 <div className="flex-auto mt-9">
                     <button className="form-button p-1 pr-8 pl-8" >Add</button>

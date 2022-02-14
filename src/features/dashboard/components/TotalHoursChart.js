@@ -31,11 +31,11 @@ const TotalHoursChart = () => {
             innerStart:20,
             outerStart:20,
         },
-        cutout: 180
+        cutout: 160
      
     }
     return (
-        <div className="flex-auto w-12 bg-white m-4">
+        <div className="flex-auto w-8 bg-white m-4">
             <Doughnut
                 data={data}
                 options={options}

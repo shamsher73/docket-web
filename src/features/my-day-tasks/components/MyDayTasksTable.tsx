@@ -1,7 +1,30 @@
 import { ReactComponent as Filter } from './../../../styles/btn-filter.svg';
 import { ReactComponent as ArrowRight } from './../../../styles/arrow-right.svg';
+import { useState } from 'react';
+import Modal from 'react-modal';
 
 const MyDayTasksTable = () => {
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const openModal = () => {
+        console.log("this is open modal")
+        setModalIsOpen(true);
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    }
+    const customStyles = {
+        content: {
+          top: '0%',
+          left: '75%',
+          right: '0%',
+          bottom: '0%',
+        //   marginRight: '-50%',
+        //   transform: 'translate(-50%, -50%)',
+        },
+      };
+
     return (
         <div className="w-full h-full p-4 mt-8 card">
             <div className="flex">
@@ -43,7 +66,7 @@ const MyDayTasksTable = () => {
                         <td>11 Nov 21</td>
                         <td className='flex place-content-around pt-6'>
                             <span className='flex-none snap-center label-pending'>PENDING</span>
-                            <ArrowRight />
+                            <ArrowRight onClick={openModal} />
                         </td>
                     </tr>
                     <tr className="border-b odd:bg-white even:bg-gray-50 ">
@@ -65,6 +88,25 @@ const MyDayTasksTable = () => {
                     </tr>
                 </tbody>
             </table>
+
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+                
+            >
+                <h2>Hello</h2>
+                <button onClick={closeModal}>close</button>
+                <div>I am a modal</div>
+                <form>
+                <input />
+                <button>tab navigation</button>
+                <button>stays</button>
+                <button>inside</button>
+                <button>the modal</button>
+                </form>
+            </Modal>
         </div>
     )
 }
