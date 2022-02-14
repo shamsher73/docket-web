@@ -35,7 +35,7 @@ const TotalHoursChart = () => {
      
     }
     return (
-        <div className="flex-auto w-8 bg-white m-4">
+        <div className="">
             <Doughnut
                 data={data}
                 options={options}

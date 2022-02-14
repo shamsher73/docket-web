@@ -33,7 +33,7 @@ function WorkingHoursChart() {
     }
 
     return (
-        <div className='flex-auto h-64 bg-white p-4'>
+        <div className='flex-auto h-64 p-4'>
 
             <Bar
             

@@ -360,3 +360,86 @@
   color: #50B5FF;
 }
 
+.modal-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #171725;
+}
+
+.modal-subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #44444F;
+}
+
+.description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+
+  color: #92929D;
+}
+
+.priority-button {
+  background: #F1F9FF;
+  border-radius: 10px;
+}
+
+.priority-button-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.0857143px;
+
+  color: #44444F;
+
+}
+
+.add {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+
+  color: #5F8FE3;
+}
+
+.label-blue {
+  background: #5F8FE3;
+  border-radius: 4px;
+}
+
+.button-primary {
+  background: linear-gradient(180deg, #6B85E6 0%, #6895E6 100%);
+border-radius: 6px;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.1px;
+
+color: #FAFAFB;
+}

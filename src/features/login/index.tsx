@@ -1,9 +1,9 @@
 import React from 'react';
 import {ReactComponent as LogoGeekyants} from './../../styles/logo-geekyants.svg';
 import {ReactComponent as UserOnDesk} from './../../styles/user-on-desk.svg';
-import LoginButton from './components/LoginButton';
+import LoginButton from '../../components/LoginButton';
 
-import Text from './components/Text';
+import Text from '../../components/Text';
 
 const UserLogin = () => {
     return (

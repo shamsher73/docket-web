@@ -6,9 +6,9 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import UserLogin from './features/login/UserLogin';
-import Dashboard from './features/dashboard/Dashboard';
-import MyDayTasks from './features/my-day-tasks/MyDayTasks';
+import UserLogin from './features/login';
+import Dashboard from './features/dashboard';
+import MyDayTasks from './features/my-day-tasks';
 
 
 ReactDOM.render(
