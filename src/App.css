@@ -433,13 +433,53 @@
 
 .button-primary {
   background: linear-gradient(180deg, #6B85E6 0%, #6895E6 100%);
-border-radius: 6px;
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 16px;
-letter-spacing: 0.1px;
+  border-radius: 6px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #FAFAFB;
+}
 
-color: #FAFAFB;
+.working-hours-center-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.116667px;
+  color: #171725;
+}
+
+.cat-1 {
+  background: #64B3EB;
+  border-radius: 6px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.graph-label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #44444F;
+}
+
+.graph-sub-label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #44444F;
 }
