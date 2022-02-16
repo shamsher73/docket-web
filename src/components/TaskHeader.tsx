@@ -1,5 +1,5 @@
 
-import { ReactComponent as Filter } from './../styles/btn-filter.svg';
+import { ReactComponent as Filter } from './../styles/assets/images/btn-filter.svg';
 
 const TaskHeader = () => {
     return (

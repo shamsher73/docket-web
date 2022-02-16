@@ -1,5 +1,5 @@
 
-import { ReactComponent as RepeatIcon } from './../../styles/repeat.svg';
+import { ReactComponent as RepeatIcon } from './../../styles/assets/images/repeat.svg';
 
 const Repeat = ():JSX.Element => {
     return (

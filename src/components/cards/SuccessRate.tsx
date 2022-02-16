@@ -1,4 +1,4 @@
-import Party1 from './../../styles/party.png';
+import Party1 from './../../styles/assets/images/party.png';
 
 const SuccessRate = () => {
     return (

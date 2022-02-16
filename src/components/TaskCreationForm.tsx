@@ -1,5 +1,8 @@
-import { ReactComponent as Person } from './../styles/form-person.svg';
+import { ReactComponent as Person } from './../styles/assets/images/form-person.svg';
 import Creatable from 'react-select/creatable';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTask } from '../features/my-day-tasks/taskSlice';
 
 const TaskCreationForm = () => {
 
@@ -32,11 +35,34 @@ const TaskCreationForm = () => {
       
       };
 
+    const [selectedOption, setSelectedOption] = useState('');
+    const [task, setTask] = useState('');
+    const dispatch = useDispatch()
+    const handleChangeOption = (selectedOption:any) => {
+        setSelectedOption(selectedOption.value);
+    };
+    const handleChangeTask = (e:any) => {
+        setTask(e.target.value);
+    }
+    
+    const createTask = () => {
+        if(selectedOption && task){
+            dispatch(
+                addTask({
+                    task: task,
+                    category: selectedOption,
+                })
+            );
+            setTask('');
+            setSelectedOption('');
+        }
+    }
+
     const options = [
-        { value: 'id1', label: 'Category 1' },
-        { value: 'id2', label: 'Category 2' },
-        { value: 'id3', label: 'Category 3' }
-      ]
+        { value: 'Category 1', label: 'Category 1' },
+        { value: 'Category 2', label: 'Category 2' },
+        { value: 'Category 3', label: 'Category 3' }
+    ]
 
     return (
         <div className="task-create-form w-full p-4">
@@ -48,14 +74,14 @@ const TaskCreationForm = () => {
             <div className="flex">
                 <div className="flex-auto w-32 p-4">
                     <label className="form-label">TASK</label>
-                    <input type="text" className="w-full input-area input-text pl-4" />
+                    <input type="text" className="w-full input-area input-text pl-4" onChange={handleChangeTask} value={task}/>
                 </div>
                 <div className="flex-auto w-24 p-4">
                     <label className="form-label">Category</label>
-                    <Creatable options={options} styles={customStyles}  />
+                    <Creatable options={options} styles={customStyles} onChange={handleChangeOption}/>
                 </div>
                 <div className="flex-auto mt-11">
-                    <button className="form-button p-1 pr-8 pl-8" >Add</button>
+                    <button className="form-button p-1 pr-8 pl-8" onClick={createTask}>Add</button>
                 </div>
             </div>
         </div>

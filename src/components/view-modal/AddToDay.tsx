@@ -1,5 +1,5 @@
 
-import { ReactComponent as Sun } from './../../styles/sun.svg';
+import { ReactComponent as Sun } from './../../styles/assets/images/sun.svg';
 
 const AddToDay = ():JSX.Element => {
     return (

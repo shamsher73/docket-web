@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import {ReactComponent as Google} from './../styles/Google.svg';
+import {ReactComponent as Google} from './../styles/assets/images/Google.svg';
 
 const LoginButton = () => {
     return (

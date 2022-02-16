@@ -1,37 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import UserLogin from './features/login';
-import Dashboard from './features/dashboard';
-import MyDayTasks from './features/my-day-tasks';
-
+import { BrowserRouter } from "react-router-dom";
+import AllRoutes from "./app/routes";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-      <Routes>
-            <Route path="/login" element={<UserLogin />} />
-            <Route path="/" element={<App />} >
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/my-day-tasks" element={<MyDayTasks />} />
-            </Route>
-            <Route
-              path="*"
-              element={
-                <main style={{ padding: "1rem" }}>
-                  <p>Not Found</p>
-                </main>
-              }
-            />
-        </Routes>
-
-   
+        <AllRoutes />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

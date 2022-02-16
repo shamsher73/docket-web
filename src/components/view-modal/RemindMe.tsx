@@ -1,5 +1,5 @@
 
-import { ReactComponent as Alarm } from './../../styles/alarm.svg';
+import { ReactComponent as Alarm } from './../../styles/assets/images/alarm.svg';
 
 const RemindMe = ():JSX.Element => {
     return (

@@ -1,5 +1,5 @@
 
-import { ReactComponent as PriorityIcon } from './../../styles/priority.svg';
+import { ReactComponent as PriorityIcon } from './../../styles/assets/images/priority.svg';
 
 const Priority = ({ priority }:{priority:string}) => {
     return (

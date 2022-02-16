@@ -1,6 +1,6 @@
 import React from 'react';
-import {ReactComponent as LogoGeekyants} from './../../styles/logo-geekyants.svg';
-import {ReactComponent as UserOnDesk} from './../../styles/user-on-desk.svg';
+import {ReactComponent as LogoGeekyants} from './../../styles/assets/images/logo-geekyants.svg';
+import {ReactComponent as UserOnDesk} from './../../styles/assets/images/user-on-desk.svg';
 import LoginButton from '../../components/LoginButton';
 
 import Text from '../../components/Text';

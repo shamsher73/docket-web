@@ -1,5 +1,5 @@
-import { ReactComponent as UserImage } from './../styles/Profile.svg';
-import { ReactComponent as Notification } from './../styles/notification.svg';
+import { ReactComponent as UserImage } from './../styles/assets/images/Profile.svg';
+import { ReactComponent as Notification } from './../styles/assets/images/notification.svg';
 
 const Header = ({name}: {name:string}) => {
     return (

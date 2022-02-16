@@ -1,13 +1,25 @@
 
-import { ReactComponent as ArrowRight } from './../../styles/arrow-right.svg';
+import { ReactComponent as ArrowRight } from './../../styles/assets/images/arrow-right.svg';
 
+interface SubTask {
+    title: string
+    startTime: string
+    endTime: string
+    status: string
+}
 
 interface RowProps {
-    task: string,
-    category: string,
-    tags: string,
-    time: string,
-    dueDate: string,
+    id:number
+    task: string
+    description: string
+    priority: string
+    subTasks: SubTask[]
+    category: string
+    tags: string[]
+    time: number
+    due_date: string
+    remind_me: string
+    repeat: string
     status: string
 }
 
@@ -25,10 +37,10 @@ const Row = ({data,handleModal}:{data:RowProps,handleModal:any}) => {
             <td>{data.category}</td>
             <td>{data.tags}</td>
             <td>{data.time}</td>
-            <td>{data.dueDate}</td>
+            <td>{data.due_date}</td>
             <td className='flex place-content-around pt-6'>
-                <span className={`label-${data.status} flex-none snap-center`}>{data.status}</span>
-                <ArrowRight onClick={handleModal} />
+                <span className={`label-${data.status} flex-none snap-center`}>{data.status.toUpperCase()}</span>
+                <ArrowRight onClick={() => handleModal(data.id)} />
             </td>
         </tr>
     )
