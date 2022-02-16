@@ -62,6 +62,35 @@ const initialState = [{
     remind_me: '',
     repeat: '',
     status: 'pending'
+},
+{
+    id: generateId(),
+    task: 'test task 2',
+    description: 'test description',
+    priority: 'high',
+    subTasks: [
+        {
+            title: 'test sub task',
+            startTime: '09:10',
+            endTime: '10:10',
+            status: 'pending'
+            
+        },
+        {
+            title: 'test sub task2',
+            startTime: '11:10',
+            endTime: '12:15',
+            status: 'pending'
+            
+        }
+    ],
+    category: 'work',
+    tags: ['test', 'test2'],
+    time: 0,
+    due_date: '2020-01-01',
+    remind_me: '',
+    repeat: '',
+    status: 'completed'
 }];
 
 
@@ -100,9 +129,17 @@ const taskReducer = createSlice({
             }
             return state.map((task:TaskState) => task.id === id ? updatedTask : task)
         },
+
+        //get filterd tasks
+        getFilteredTasks : (state, action: any) => {
+            return state.filter((task:TaskState) => task.status === action.payload)
+        }
+
+       
+
     }
 }
 )
-export const { addTask, removeTask, updateTask } = taskReducer.actions
+export const { addTask, removeTask, updateTask, getFilteredTasks } = taskReducer.actions
 
 export default taskReducer.reducer
