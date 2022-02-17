@@ -3,7 +3,7 @@ import DashboardHeader from "../../components/DashboardHeader";
 import OverallPendingTask from "../../components/cards/OverallPendingTask";
 import SuccessRate from "../../components/cards/SuccessRate";
 import TotalHoursChart from "../../components/cards/TotalHoursChart";
-import WorkingHoursChart from "../../components/cards/WorkingHoursChart";
+// import WorkingHoursChart from "../../components/cards/WorkingHoursChart";
 
 const Dashboard = () => {
     return (
@@ -16,9 +16,9 @@ const Dashboard = () => {
                     <Card className="flex-1" title="Success Rate"><SuccessRate /></Card>
                 </div>
             </div>
-            <div className="flex">
+            {/* <div className="flex">
                 <Card className="flex-1" title="Working Hours breakdown"><WorkingHoursChart /></Card>
-            </div>
+            </div> */}
         </div>
     );
 }
