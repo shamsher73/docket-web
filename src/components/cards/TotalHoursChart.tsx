@@ -1,4 +1,6 @@
 import { Doughnut } from "react-chartjs-2";
+import 'chart.js/auto';
+
 const TotalHoursChart = () => {
     const data = {
         // labels: ['Red', 'Blue', 'Yellow','Green'],
