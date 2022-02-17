@@ -8,7 +8,9 @@ import MyDayTasks from "../features/my-day-tasks";
 const AllRoutes = () => {
     return (
         <Routes>
-            <Route path="/login" element={<UserLogin />} />
+            <Route path="/" element={<UserLogin />} />
+            
+
             <Route path="/" element={<App />} >
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/my-day-tasks" element={<MyDayTasks />} />
