@@ -35,7 +35,7 @@ function WorkingHoursChart() {
     return (
         <div className='flex flex-col flex-auto p-8 mr-2 ml-2 card'>
             <div className="flex-1">
-                <label className="card-text">Total working hours</label>
+                <label className="card-text">Working Hours breakdown</label>
             </div>
             <div className='flex-auto'>
                 <Bar

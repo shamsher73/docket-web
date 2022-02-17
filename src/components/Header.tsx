@@ -4,10 +4,10 @@ import { ReactComponent as Notification } from './../styles/assets/images/notifi
 const Header = ({name}: {name:string}) => {
     return (
         <header className='flex items-center justify-between flex-wrap bg-white h-16 border-b-2'>
-            <div className='flex-none p-4 w-64'>
+            <div className='flex-none p-4 w-24 md:w-64'>
                 LOGO
             </div>
-            <div className='flex-auto w-64'>
+            <div className='flex-auto w-12 sm:w-24 md:w-64'>
                 <div className="flex-1 w-32 justify-left">
                     <div className="flex border-1 rounded search-box">
                         <button className="flex items-center justify-center px-4 ">
@@ -26,7 +26,7 @@ const Header = ({name}: {name:string}) => {
                 <div className='flex-none pr-6'>
                     <Notification />
                 </div>
-                <div>
+                <div className='invisible sm:visible md:visible '>
                     <UserImage />
                 </div>
                 <div className='user-text pl-4'>

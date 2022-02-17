@@ -7,10 +7,10 @@ import WorkingHoursChart from "../../components/cards/WorkingHoursChart";
 
 const Dashboard = () => {
     return (
-        <div className="w-full p-6 flex flex-col">
+        <div className="w-full p-6 md:flex md:flex-col">
             <div className="basis-1/2">
                 <DashboardHeader />
-                <div className="flex flex-row">
+                <div className="md:flex md:flex-row">
                     <div className="basis-1/2">
                         <TotalHoursChart />
                     </div>
