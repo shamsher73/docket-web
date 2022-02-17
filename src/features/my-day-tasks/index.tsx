@@ -35,6 +35,11 @@ const MyDayTasks = () => {
         }
     }
 
+    const taskAdded = (task:any) => {
+        setAllTasks([...allTasks, task]);
+        setRows([...rows, task]);
+    }
+
     const customStyles = {
         content: {
             top: '0%',
@@ -46,7 +51,7 @@ const MyDayTasks = () => {
 
     return (
         <div className="w-full h-full p-4">
-            <TaskCreationForm />
+            <TaskCreationForm taskAdded={taskAdded}/>
             <div className="w-full h-full p-4 mt-8 card">
                 <TaskHeader filterHandler={changeFilter} filter={filter}/>
                 <TaskTable headers={headers} rows={rows} handleModal={openModal} />

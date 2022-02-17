@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../features/my-day-tasks/taskSlice';
 
-const TaskCreationForm = () => {
+const TaskCreationForm = ({taskAdded}:{taskAdded:any}) => {
 
 
     const customStyles = {
@@ -30,8 +30,13 @@ const TaskCreationForm = () => {
             lineHeight: "23px",
             letterSpacing: "0.075px",
             color: "#ffffff",
-            
         }),
+        singleValue: (provided:any, state:any) => {
+            const opacity = state.isDisabled ? 0.5 : 1;
+            const color = "#ffffff";
+            return { ...provided, opacity, color };
+          },
+        
       
       };
 
@@ -44,15 +49,31 @@ const TaskCreationForm = () => {
     const handleChangeTask = (e:any) => {
         setTask(e.target.value);
     }
+    const generateId = () => 
+    Math.floor(Math.random() * 100000);
+
     
     const createTask = () => {
         if(selectedOption && task){
+            let newTask = {
+                id: generateId(),
+                task:task,
+                category:selectedOption,
+                description: '',
+                priority: 'medium',
+                subTasks: [],
+                tags: [],
+                time: 0,
+                due_date: '',
+                remind_me: '',
+                repeat: '',
+                status: 'pending'
+            }
             dispatch(
-                addTask({
-                    task: task,
-                    category: selectedOption,
-                })
+                addTask(newTask)
             );
+      
+            taskAdded(newTask)
             setTask('');
             setSelectedOption('');
         }
@@ -74,7 +95,7 @@ const TaskCreationForm = () => {
             <div className="flex">
                 <div className="flex-auto w-32 p-4">
                     <label className="form-label">TASK</label>
-                    <input type="text" className="w-full input-area input-text pl-4" onChange={handleChangeTask} value={task}/>
+                    <input type="text" className="w-full input-area input-text pl-4 mt-1" onChange={handleChangeTask} value={task}/>
                 </div>
                 <div className="flex-auto w-24 p-4">
                     <label className="form-label">Category</label>

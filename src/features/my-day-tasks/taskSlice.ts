@@ -22,13 +22,9 @@ interface TaskState {
     status: string
 }
 
-interface TaskAddState {
-    task : string
-    category : string
-}
 
 interface TaskAction {
-    payload: TaskAddState
+    payload: TaskState
 }
 
 const generateId = () => 
@@ -99,20 +95,7 @@ const taskReducer = createSlice({
     initialState,
     reducers : {
         addTask : (state, action: TaskAction) => {
-            const newTask = {
-                id: generateId(),
-                task: action.payload.task,
-                category: action.payload.category,
-                description: '',
-                priority: 'medium',
-                subTasks: [],
-                tags: [],
-                time: 0,
-                due_date: '',
-                remind_me: '',
-                repeat: '',
-                status: 'pending'
-            }
+            const newTask = action.payload;
             state.push(newTask)
         },
         removeTask : (state, action: any) => {
