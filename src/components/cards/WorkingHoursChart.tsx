@@ -9,25 +9,25 @@ function WorkingHoursChart() {
                 label: 'Cat1',
                 backgroundColor: 'rgba(107, 137, 230,1)',
                 borderWidth: 1,
-                borderRadius: Number.MAX_VALUE,
-                borderSkipped: true,
+                borderRadius: 3,
+                barThickness: 12,
                 data: [4, 2, 1, 3, 4, 3, 2, 1, 3, 4, 1, 2],
             },
             {
                 label: 'Cat2',
                 backgroundColor: 'rgba(100, 179, 235,1)',
                 borderWidth: 1,
-                borderRadius: Number.MAX_VALUE,
-                borderSkipped: true,
-                    data: [4, 2, 1, 3, 4, 3, 2, 1, 3, 4, 1, 2],
+                borderRadius: 3,
+                barThickness: 12,
+                data: [4, 2, 1, 3, 4, 3, 2, 1, 3, 4, 1, 2],
             },
             {
                 label: 'Cat3',
                 backgroundColor: 'rgba(226, 226, 235,1)',
                 borderWidth: 1,
-                borderRadius: Number.MAX_VALUE,
-                borderSkipped: true,
-                    data: [4, 2, 1, 3, 4, 3, 2, 1, 3, 4, 1, 2],
+                borderRadius: 3,
+                barThickness: 12,      
+                data: [4, 2, 1, 3, 4, 3, 2, 1, 3, 4, 1, 2],
             }
         ]
     }
@@ -40,31 +40,16 @@ function WorkingHoursChart() {
             <div className='flex-auto'>
                 <Bar
                     data={state}
-                    legend={
-                        {
-                            display: false,
-                        }
-                    }
                     options={
                         {
                             maintainAspectRatio: false,
                             responsive: true,
-                            barThickness: 12,
-                            borderRadius: 3,
                             scales: {
                                 x: {
                                     stacked: true,
                                 },
                                 y: {
                                     stacked: true
-                                }
-                            },
-                        
-                            tooltips: {
-                                callbacks: {
-                                    label: function (tooltipItem) {
-                                        return tooltipItem.yLabel;
-                                    }
                                 }
                             },
                         }

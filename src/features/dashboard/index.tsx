@@ -1,4 +1,3 @@
-import Card from "../../components/Card";
 import DashboardHeader from "../../components/DashboardHeader";
 import OverallPendingTask from "../../components/cards/OverallPendingTask";
 import SuccessRate from "../../components/cards/SuccessRate";

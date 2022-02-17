@@ -19,7 +19,7 @@ const NavBarTop = () => {
         }
     ];
     return (
-        <div className="flex-none sm:w-32 md:w-64 bg-white h-full">
+        <div className="flex-none w-18 sm:w-32 md:w-64 bg-white h-full">
             {navLinks.map((navLink, index) => {
                 return (
                     <NavItem key={index} route={navLink.route} text={navLink.text} />
