@@ -33,45 +33,45 @@ function WorkingHoursChart() {
     }
 
     return (
-        <div className='flex-auto h-64 p-4'>
-
-            <Bar
-            
-                data={state}
-                legend={
-                    {
-                        display: false,
-                    }
-                }
-                options={
-                    {
-                        legend: {
+        <div className='flex flex-col flex-auto p-8 mr-2 ml-2 card'>
+            <div className="flex-1">
+                <label className="card-text">Total working hours</label>
+            </div>
+            <div className='flex-auto'>
+                <Bar
+                    data={state}
+                    legend={
+                        {
                             display: false,
-                            position: 'bottom'
-                        },
-                        responsive: true,
-                        barThickness: 12,
-                        borderRadius: 3,
-                        scales: {
-                            x: {
-                                stacked: true,
-                            },
-                            y: {
-                                stacked: true
-                            }
-                        },
-                      
-                        maintainAspectRatio: false,
-                        tooltips: {
-                            callbacks: {
-                                label: function (tooltipItem) {
-                                    return tooltipItem.yLabel;
-                                }
-                            }
-                        },
+                        }
                     }
-                }
-            />
+                    options={
+                        {
+                            maintainAspectRatio: false,
+                            responsive: true,
+                            barThickness: 12,
+                            borderRadius: 3,
+                            scales: {
+                                x: {
+                                    stacked: true,
+                                },
+                                y: {
+                                    stacked: true
+                                }
+                            },
+                        
+                            tooltips: {
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        return tooltipItem.yLabel;
+                                    }
+                                }
+                            },
+                        }
+                    }
+                />
+            </div>
+         
           
         </div>
     );

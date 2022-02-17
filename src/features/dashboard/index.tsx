@@ -7,17 +7,21 @@ import WorkingHoursChart from "../../components/cards/WorkingHoursChart";
 
 const Dashboard = () => {
     return (
-        <div className="h-full w-full p-4">
-            <DashboardHeader />
-            <div className="flex">
-                <Card className="flex-auto" title="Total Working Hours"><TotalHoursChart /></Card>
-                <div className="flex-auto">
-                    <Card className="flex-1" title="Overall Pending Task"><OverallPendingTask /></Card>
-                    <Card className="flex-1" title="Success Rate"><SuccessRate /></Card>
+        <div className="w-full p-6 flex flex-col">
+            <div className="basis-1/2">
+                <DashboardHeader />
+                <div className="flex flex-row">
+                    <div className="basis-1/2">
+                        <TotalHoursChart />
+                    </div>
+                    <div className="flex flex-col basis-1/2">
+                        <OverallPendingTask />
+                        <SuccessRate />
+                    </div>
                 </div>
             </div>
-            <div className="flex">
-                <Card className="flex-1" title="Working Hours breakdown"><WorkingHoursChart /></Card>
+            <div className="flex basis-1/2 mb-14">
+                <WorkingHoursChart />
             </div>
         </div>
     );
