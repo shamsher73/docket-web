@@ -2,6 +2,8 @@ import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 
 function WorkingHoursChart() {
+    const chart = new Chart;
+    console.log(chart);
     const state = {
         labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
         datasets: [
