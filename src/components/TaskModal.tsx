@@ -42,7 +42,7 @@ const TaskModal = ({taskId,closeModal}:{taskId:number,closeModal:any}) => {
     }
    
     return (
-        <>
+        <div className='overflow-y-auto h-full'>
             <label className='modal-title'>Task Details</label>
             <div className='flex p-2'>
                 <Oval className=""/>
@@ -64,7 +64,7 @@ const TaskModal = ({taskId,closeModal}:{taskId:number,closeModal:any}) => {
                     <button className="button-primary p-2" onClick={save}>Save</button>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

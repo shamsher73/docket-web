@@ -40,14 +40,6 @@ const MyDayTasks = () => {
         setRows([...rows, task]);
     }
 
-    const customStyles = {
-        content: {
-            top: '0%',
-            left: '75%',
-            right: '0%',
-            bottom: '0%',
-        },
-    };
 
     return (
         <div className="w-full h-full p-4">
@@ -61,8 +53,8 @@ const MyDayTasks = () => {
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                style={customStyles}
                 contentLabel="Example Modal"
+                className="absolute right-0 top-0 bg-white w-96 sm:w-80 h-full"
             >
                 <TaskModal taskId={taskId} closeModal={closeModal}/>
             </Modal>
