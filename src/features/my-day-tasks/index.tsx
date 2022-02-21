@@ -7,6 +7,7 @@ import TaskModal from "../../components/TaskModal";
 import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
 
+
 const MyDayTasks = () => {
     const headers = ['task', 'category', 'tags', 'time', 'due date', 'status'];
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -40,9 +41,14 @@ const MyDayTasks = () => {
         setRows([...rows, task]);
     }
 
+    const taskUpdated = (task:any) => {
+        const index = allTasks.findIndex(t => t.id === task.id);
+        setAllTasks([...allTasks.slice(0, index), task, ...allTasks.slice(index + 1)]);
+        setRows([...rows.slice(0, index), task, ...rows.slice(index + 1)]);
+    }
 
     return (
-        <div className="w-full h-full p-4">
+        <div className="w-full h-full p-8">
             <TaskCreationForm taskAdded={taskAdded}/>
             <div className="w-full h-full p-4 mt-8 card">
                 <TaskHeader filterHandler={changeFilter} filter={filter}/>
@@ -56,7 +62,7 @@ const MyDayTasks = () => {
                 contentLabel="Example Modal"
                 className="absolute right-0 top-0 bg-white w-96 sm:w-80 h-full"
             >
-                <TaskModal taskId={taskId} closeModal={closeModal}/>
+                <TaskModal taskId={taskId} closeModal={closeModal} taskUpdated={taskUpdated}/>
             </Modal>
         </div>
     )

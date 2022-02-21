@@ -1,6 +1,8 @@
 import NavItem from "./NavItem";
 
-const NavBarTop = () => {
+const NavBarTop = ({mobileMenu}:{mobileMenu:boolean}) => {
+
+   
     const navLinks = [{
             route: "/dashboard",
             text: "Dashboard"
@@ -18,8 +20,9 @@ const NavBarTop = () => {
             text: "History"
         }
     ];
+    const classText = "flex-none sm:inline sm:w-32 md:w-64 bg-white h-full";
     return (
-        <div className="flex-none w-18 sm:w-32 md:w-64 bg-white h-full">
+        <div className={mobileMenu ? ("inline " + classText) : ("hidden " + classText)}>
             {navLinks.map((navLink, index) => {
                 return (
                     <NavItem key={index} route={navLink.route} text={navLink.text} />

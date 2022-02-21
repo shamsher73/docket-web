@@ -35,7 +35,13 @@ const Row = ({data,handleModal}:{data:RowProps,handleModal:any}) => {
                 </label>
             </td>
             <td>{data.category}</td>
-            <td>{data.tags}</td>
+            <td>
+                {data.tags.map((tag, index) => {
+                    return (
+                        <span key={index} className='table-row-text'>{tag}, </span>
+                    )
+                })}
+            </td>
             <td>{data.time}</td>
             <td>{data.due_date}</td>
             <td className='flex place-content-around pt-6'>

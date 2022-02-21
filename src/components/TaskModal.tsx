@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { removeTask, updateTask } from '../features/my-day-tasks/taskSlice';
 
-const TaskModal = ({taskId,closeModal}:{taskId:number,closeModal:any}) => {
+const TaskModal = ({taskId,closeModal,taskUpdated}:{taskId:number,closeModal:any,taskUpdated:any}) => {
     const dispatch = useDispatch()
     const tempTask = useSelector((state:any) => state.task.find((task:any) => task.id === taskId))
     const [task, setTask] = useState(tempTask)
@@ -26,8 +26,8 @@ const TaskModal = ({taskId,closeModal}:{taskId:number,closeModal:any}) => {
         setTask({...task, subTasks: subtasks})
     }
 
-    const save = (e:any) => {
-        e.preventDefault()
+    const save = () => {
+        taskUpdated(task)
         dispatch(updateTask({...task}))
         closeModal()
     }

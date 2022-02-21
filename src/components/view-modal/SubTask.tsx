@@ -37,10 +37,9 @@ const SubTask = ({subTasks,addSubTask}:{subTasks:Array<SubTaskType>,addSubTask:a
         addSubTask(subTasks.filter((t:SubTaskType) => t !== subTask));
     }
 
-    // console.log(subTasks);
     const subTaskList = subTasks.map((subTask:SubTaskType, index:number) => {
         return (
-            <div className="flex p-2">
+            <div className="flex p-2" key={index}>
             <input type="radio" name="subtask" value="1" className="flex-none "/>
             <label className="flex-auto pl-2 modal-subtitle">{subTask.title}</label>
             <input type="text" className="flex-none w-10 bg-slate-100 priority-button-text" value={subTask.startTime} disabled/>
