@@ -1,12 +1,18 @@
 import { Doughnut } from "react-chartjs-2";
 import 'chart.js/auto';
 
-const TotalHoursChart = () => {
+interface Category {
+    name: string;
+    value: number;
+}
+const TotalHoursChart = ({categories}:{categories:Array<Category>}) => {
+    const values = categories.map(category => category.value);
+    const colors = ["#64B3EB","#9a45f2","#ffce73","#e2e2eb"]
     const data = {
-        // labels: ['Red', 'Blue', 'Yellow','Green'],
+      
         datasets: [{
-            // label: 'My First Dataset',
-            data: [300, 50, 100, 70],
+         
+            data: values,
             backgroundColor: [
                 'rgb(255, 206, 115)',
                 'rgb(226, 226, 235)',
@@ -34,7 +40,7 @@ const TotalHoursChart = () => {
                 <label className="basis-1/2 card-text">Total working hours</label>
             </div>
             <div className="sm:flex sm:flex-row">
-                <div className="basis-1/2 grid justify-items-center">
+                <div className="static basis-1/2 grid justify-items-center">
                     <div className="relative  h-[30vh] w-[30vh] md:h-[30vh] md:w-[30vh] lg:h-[30vh] lg:w-[30vh] xl:h-[30vh] xl:w-[30vh] 2xl:h-[20vh] 2xl:w-[20vh] self-center">
                         <Doughnut
                             data={data}
@@ -46,28 +52,18 @@ const TotalHoursChart = () => {
                     </div>
                 </div>
                 <div className="basis-1/2 flex-auto ml-6 mt-10">
-                    <div className="flex flex-auto mt-4">
-                        <span className="m-1 dot bg-[#64B3EB]"></span>
-                        <span className="flex-auto graph-label">Category 1</span>
-                        <span className="flex-none graph-sub-label pr-12">9 hrs</span>
-                    </div>
-                    <div className="flex flex-auto mt-4">
-                        <span className="m-1 dot bg-[#9a45f2]"></span>
-                        <span className="flex-auto graph-label">Category 2</span>
-                        <span className="flex-none graph-sub-label pr-12">9 hrs</span>
-                    </div>
-                    <div className="flex flex-auto mt-4">
-                        <span className="m-1 dot bg-[#ffce73]"></span>
-                        <span className="flex-auto graph-label">Category 3</span>
-                        <span className="flex-none graph-sub-label pr-12">9 hrs</span>
-                    </div>
-                    <div className="flex flex-auto mt-4">
-                        <span className="m-1 dot bg-[#e2e2eb]"></span>
-                        <span className="flex-auto graph-label">More</span>
-                        <span className="flex-none graph-sub-label pr-12">9 hrs</span>
-                    </div>
-
-
+                
+                    {
+                        categories.map((category, index) => {
+                            return (
+                                <div className="flex flex-auto mt-4">
+                                    <span className={"m-1 dot bg-["+colors[index]+"]"}></span>
+                                    <span className="flex-auto graph-label">{category.name}</span>
+                                    <span className="flex-none graph-sub-label pr-12">{category.value} hrs</span>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
 

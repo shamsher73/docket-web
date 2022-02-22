@@ -48,10 +48,10 @@ const MyDayTasks = () => {
     }
 
     return (
-        <div className="w-full h-full p-8">
+        <div className="w-full h-screen p-8">
             <TaskCreationForm taskAdded={taskAdded}/>
-            <div className="w-full h-full p-4 mt-8 card">
-                <TaskHeader filterHandler={changeFilter} filter={filter}/>
+            <div className="w-full p-4 mt-8 m-2 card">
+                <TaskHeader filterHandler={changeFilter} filter={filter} filterValues={['all','pending','completed']}/>
                 <TaskTable headers={headers} rows={rows} handleModal={openModal} />
             </div>
 

@@ -13,10 +13,10 @@ function App() {
   }
 
   return (
-    <div className='app h-screen'>
+    <div className='app h-full w-full'>
       <Header name="Shivam Chaudhary" showMenu={showMenu}/>
-      <div className='flex h-full'>
-        <NavBarTop mobileMenu={showMobileMenu} />
+      <div className='flex h-screen '>
+        <NavBarTop mobileMenu={showMobileMenu}/>
         <Outlet />
       </div>
       

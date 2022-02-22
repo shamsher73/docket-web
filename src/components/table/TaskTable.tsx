@@ -25,7 +25,7 @@ interface RowProps {
 
 const TaskTable = ({headers,rows,handleModal}:{headers:Array<string>,rows:Array<RowProps>,handleModal:any}) => {
     return (
-        <table className="table-auto w-full mt-4">
+        <table className="table-auto w-full mt-4 m-2">
         <thead className="rounded-[10px] bg-[#F1F1F5] h-8">
             <tr className='table-column-text text-left'>
                 {headers.map((header, index) => {

@@ -20,9 +20,9 @@ const NavBarTop = ({mobileMenu}:{mobileMenu:boolean}) => {
             text: "History"
         }
     ];
-    const classText = "flex-none sm:inline sm:w-32 md:w-64 bg-white h-full";
+    const classText = "flex-none md:inline md:w-64 bg-white h-full";
     return (
-        <div className={mobileMenu ? ("inline " + classText) : ("hidden " + classText)}>
+        <div className={mobileMenu ? ("inline absolute z-50 " + classText) : ("hidden " + classText)}>
             {navLinks.map((navLink, index) => {
                 return (
                     <NavItem key={index} route={navLink.route} text={navLink.text} />
