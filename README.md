@@ -1,4 +1,5 @@
 # Docket Web Application
+### Docket is advanced task manager.
 ![iOS Example](./demo.gif)
 
 ## How to run 
